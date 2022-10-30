@@ -46,10 +46,7 @@ void blk_flush_integrity(void)
  * Description: This function prepares a bio for attaching integrity
  * metadata.  nr_vecs specifies the maximum number of pages containing
  * integrity metadata that can be attached.
- */
-struct bio_integrity_payload *bio_integrity_alloc(struct bio *bio,
-						  gfp_t gfp_mask,
-						  unsigned int nr_vecs)
+
 {
 	struct bio_integrity_payload *bip;
 	struct bio_set *bs = bio->bi_pool;
